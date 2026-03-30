@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# IDE configurations
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Target object weights - YOLO downloads them natively
+*.pt
+*.onnx
+*.engine
+
+# Ignore all source raw evaluation videos
+input_video/*.mp4
+input_video/*.avi
+input_video/*.mov
+
+# Output media handling
+# Explicitly ignore extremely heavy output videos
+output/*.mp4
+output/*.avi
+
+# Output artifacts
+# Note: In general, we DO commit output graphs and heatmaps to showcase results
+# but we ignore heavy processing outputs.

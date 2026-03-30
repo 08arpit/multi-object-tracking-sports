@@ -1,0 +1,5 @@
+--- Simple Evaluation Metrics ---
+Total unique IDs observed: 28
+Average track length (frames): 132.36
+Approximate number of ID switches: 17
+Max simultaneous players tracked: 11
