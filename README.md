@@ -11,7 +11,7 @@ This repository contains a highly modular, professional-grade computer vision pi
 
 By leveraging **YOLOv11** natively coupled with the **ByteTrack** algorithmic tracker, this system effectively bridges complex physical overlaps, deep occlusions, and rapid perspective scales without dropping tracking IDs.
 
-**Original Source Video:** [Aerial View of Youth Soccer Match (Pexels)](https://www.pexels.com/video/aerial-view-of-youth-soccer-match-on-green-field-31370176/)  
+**Original Source Video:** [Aerial View of Youth Soccer Match (Pexels)](https://www.pexels.com/video/aerial-view-of-youth-soccer-match-on-green-field-31370176/)
 
 ## ✨ Features
 
@@ -77,18 +77,8 @@ multi-object-tracking-sports/
 
 ## 🌐 Live Demo & Web App
 
-You can execute a lightweight, fully functional web interface locally using **Streamlit**, or deploy it effortlessly to cloud hosting.
-
-**Deploying to Hugging Face Spaces (Recommended UI)**
-Hugging Face Spaces is a free, powerful platform for hosting machine learning demos.
-1. Create a [Hugging Face Account](https://huggingface.co/join) and go to **New Space**.
-2. Give your space a name, and select **Streamlit** as the Space SDK.
-3. Link your Space securely to your GitHub Repository (or drag/drop the files directly).
-4. Hugging Face will automatically detect `app.py` and `requirements.txt` and launch the visual web container.
-
-**Future Live Endpoint:** `[Hugging Face Spaces URL Placeholder]`
-
 **Run Web UI Locally:**
+
 ```bash
 streamlit run app.py
 ```
