@@ -19,7 +19,7 @@ class VideoProcessor:
         os.makedirs(self.screenshot_dir, exist_ok=True)
         os.makedirs(os.path.dirname(self.output_path), exist_ok=True)
 
-    def process_video(self, conf=0.3, screenshot_interval=100, progress_callback=None):
+    def process_video(self, conf=0.3, screenshot_interval=100):
         cap = cv2.VideoCapture(self.input_path)
         if not cap.isOpened():
             raise ValueError(f"Error opening video at path: {self.input_path}")
@@ -47,10 +47,7 @@ class VideoProcessor:
         print(f"Processing source video: {self.input_path}")
         print(f"Total frame count: {total_frames}")
 
-        for i in tqdm(range(total_frames), desc="Tracking players"):
-            if progress_callback:
-                progress_callback(i, total_frames)
-                
+        for _ in tqdm(range(total_frames), desc="Tracking players"):
             ret, frame = cap.read()
             if not ret:
                 break
