@@ -1,6 +1,6 @@
-ultralytics>=8.0.0
+ultralytics==8.2.103
 opencv-python-headless==4.9.0.80
-numpy
+numpy<2.0
 tqdm
 matplotlib
 streamlit
