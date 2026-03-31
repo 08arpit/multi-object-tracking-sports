@@ -12,7 +12,6 @@ This repository contains a highly modular, professional-grade computer vision pi
 By leveraging **YOLOv11** natively coupled with the **ByteTrack** algorithmic tracker, this system effectively bridges complex physical overlaps, deep occlusions, and rapid perspective scales without dropping tracking IDs.
 
 **Original Source Video:** [Aerial View of Youth Soccer Match (Pexels)](https://www.pexels.com/video/aerial-view-of-youth-soccer-match-on-green-field-31370176/)  
-**[Watch Demo Video Here] (link placeholder)**
 
 ## ✨ Features
 
