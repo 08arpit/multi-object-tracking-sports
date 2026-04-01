@@ -13,6 +13,11 @@ By leveraging **YOLOv11** natively coupled with the **ByteTrack** algorithmic tr
 
 **Original Source Video:** [Aerial View of Youth Soccer Match (Pexels)](https://www.pexels.com/video/aerial-view-of-youth-soccer-match-on-green-field-31370176/)
 
+## 🧠 Model & Tracker Choice
+
+- **YOLOv11 (Detection)**: Selected as the primary detection model due to its state-of-the-art inference speed and high accuracy in dynamic environments like sports, offering robust bounding box evaluation even under rapid perspective shifts.
+- **ByteTrack (Tracking)**: Chosen for its robust ID persistence. By leveraging Kalman velocity filters mapped via Hungarian Bipartite matching, ByteTrack gracefully recovers bounding boxes safely during deep visual crossings, effectively eliminating the standard identity-swap errors found in basic generic tracking models.
+
 ## ✨ Features
 
 - **Persistent Object Tracking**: Implements ByteTrack (`persist=True`) utilizing Kalman velocity filters mapped via Hungarian Bipartite matching.
@@ -52,7 +57,15 @@ multi-object-tracking-sports/
 
 ---
 
-## 💻 Installation
+## 📦 Dependencies & Installation
+
+**Core Library Dependencies:**
+- `ultralytics` (YOLO Architecture Interface)
+- `opencv-python` (Computer Vision Operations & Annotations)
+- `numpy` & `matplotlib` (Matrix Calcs, Heatmaps, and Data Plotting)
+- `streamlit` (Web Application Framework)
+
+**Installation Steps:**
 
 1. **Clone the repository:**
 
@@ -76,6 +89,8 @@ multi-object-tracking-sports/
 ---
 
 ## 🌐 Live Demo & Web App
+
+**Live Demo:** [https://multi-object-tracking-sports-rfe9u9yl9h3pfcmpblhxsa.streamlit.app/](https://multi-object-tracking-sports-rfe9u9yl9h3pfcmpblhxsa.streamlit.app/)
 
 **Run Web UI Locally:**
 
@@ -119,6 +134,12 @@ After executing the pipeline, navigate to your `/output` folder:
 
 ## ⚠️ Assumptions & Limitations
 
+### Project Assumptions
+- **Static Camera Base**: The tracking logic assumes the camera angle remains fundamentally static (e.g., broadcast box or bird's eye view) with minimal extreme panning or deep immediate focal zooms.
+- **Persistent Visual Features**: Assumes athletes maintain consistent primary visual features (such as team jersey colors/shapes) to aid the ID persistence and Team Clustering mechanics.
+- **Continuous Environment**: Asserts athletes are contained within a single unified play area without leaving the camera frame continuously throughout their active playing times.
+
+### Known Limitations
 While this system mathematically handles standard tracking assignments natively, real-world environments present practical limitations that users should plan to accommodate:
 
 - **Detection Bounds (False Positives)**: Pushing detection confidence thresholds too low naturally introduces background stadium artifacts or complex advertisement geometry as participant vectors.
